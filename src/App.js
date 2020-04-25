@@ -7,6 +7,8 @@ import {AddButtonList, List, Tasks} from './components/index'
 function App() {
     const [lists, setLists] = useState(null)
     const [colors, setColors] = useState(null)
+    const [activeItem, setActiveItem] = useState(null)
+
 
     useEffect(() => {
         axios
@@ -23,6 +25,27 @@ function App() {
         const newList = [ ...lists, obj]
         setLists(newList)
     }
+
+    const onAddTask = (listId, taskObj) =>{
+        const newList = lists.map(item => {
+            if(item.id === listId){
+                item.tasks = [...item.tasks, taskObj]
+            }
+            return item
+        })
+        setLists(newList)
+    }
+
+    const onEditListTitle = (id, title) =>{
+        const newList = lists.map(item => {
+            if(item.id === id){
+                item.name = title
+            }
+            return item
+        })
+        setLists(newList)
+    }
+
   return (
         <div className='todo'>
             <div className='todo__sidebar'>
@@ -38,6 +61,10 @@ function App() {
                 {lists ? (
                 <List
                     isRemovable={true}
+                    onClickItem={item => {
+                        setActiveItem(item)
+                    }}
+                    activeItem={activeItem}
                     onRemove={id => {
                         const newLists = lists.filter(item => item.id !== id);
                         setLists(newLists);
@@ -52,7 +79,7 @@ function App() {
                 <AddButtonList onAdd={onAddList} colors={colors}/>
             </div>
             <div className={'todo__tasks'}>
-                {lists && <Tasks list={lists[0]} />}
+                {lists && activeItem  && <Tasks onAddTask={onAddTask} list={activeItem} onEditTitle={onEditListTitle} />}
             </div>
         </div>
   );
