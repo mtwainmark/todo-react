@@ -7,23 +7,13 @@
     },
     {
       "id": 3,
-      "name": "Фильмы и сериалы",
+      "name": "Фильмы",
       "colorId": 3
     },
     {
       "id": 4,
       "name": "Книги",
       "colorId": 2
-    },
-    {
-      "id": 5,
-      "name": "Личное",
-      "colorId": 1
-    },
-    {
-      "name": "de",
-      "colorId": 1,
-      "id": 6
     }
   ],
   "tasks": [
@@ -31,7 +21,7 @@
       "id": 1,
       "listId": 2,
       "text": "Изучить JavaScript",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
@@ -43,7 +33,7 @@
       "id": 3,
       "listId": 2,
       "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
@@ -53,105 +43,33 @@
     },
     {
       "listId": 3,
-      "text": "123",
-      "completed": true,
+      "text": "1+1",
+      "completed": false,
       "id": 5
     },
     {
       "listId": 3,
-      "text": "Купить 1984!",
-      "completed": true,
+      "text": "Зеленая книга",
+      "completed": false,
       "id": 10
     },
     {
       "listId": 4,
-      "text": "222",
-      "completed": true,
+      "text": "Чемодан",
+      "completed": false,
       "id": 12
     },
     {
-      "listId": 2,
-      "text": "ewq",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "listId": 2,
-      "text": "qwe",
-      "completed": false,
-      "id": 14
-    },
-    {
-      "listId": 2,
-      "text": "ffff",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "listId": 2,
-      "text": "ewqeqw",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "listId": 2,
-      "text": "qweeqweqweeqe",
-      "completed": false,
-      "id": 17
-    },
-    {
-      "listId": 2,
-      "text": "ewqeqrwrqwfcee",
-      "completed": false,
-      "id": 18
-    },
-    {
-      "listId": 3,
-      "text": "ку",
-      "completed": false,
-      "id": 19
-    },
-    {
-      "listId": 6,
-      "text": "1",
-      "completed": false,
-      "id": 20
-    },
-    {
       "listId": 4,
-      "text": "123",
+      "text": "Компромисс",
       "completed": false,
       "id": 21
     },
     {
-      "listId": 3,
-      "text": "",
+      "listId": 2,
+      "text": "ES6",
       "completed": false,
       "id": 22
-    },
-    {
-      "listId": 3,
-      "text": "",
-      "completed": false,
-      "id": 23
-    },
-    {
-      "listId": 6,
-      "text": "321",
-      "completed": false,
-      "id": 24
-    },
-    {
-      "listId": 6,
-      "text": "123",
-      "completed": false,
-      "id": 25
-    },
-    {
-      "listId": 6,
-      "text": "33333333333333333",
-      "completed": false,
-      "id": 26
     }
   ],
   "colors": [

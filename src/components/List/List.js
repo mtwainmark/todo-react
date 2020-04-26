@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios'
+import classNames from 'classnames';
 
 import './List.scss'
 import Badge from "../Badge/Badge";
@@ -18,7 +19,12 @@ const List = ({items, isRemovable, onClick, onRemove, onClickItem, activeItem}) 
     return(
         <ul onClick={onClick} className="list">
             {items.map((item, index) => (
-                <li onClick={onClickItem ? () => onClickItem(item) : null} key={index} className={activeItem && activeItem.id === item.id ? 'active' : ''}>
+                <li onClick={onClickItem ? () => onClickItem(item) : null} key={index}  className={classNames(item.className, {
+                    active: item.active
+                        ? item.active
+                        : activeItem && activeItem.id === item.id
+                    })}
+                >
                     <i>
                         {item.icon ? <img src={item.icon} alt={''}/> : <Badge color={item.color.name}/>}
                     </i>
